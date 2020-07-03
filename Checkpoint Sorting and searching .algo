@@ -1,0 +1,16 @@
+ALGORITHM Iinsertion_sort
+VAR
+    arr : ARRAY_OF INTEGER;
+    i,R,j:INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 STEP 1  DO
+                R:=arr[i];
+        FOR j FROM i-1 TO 0 STEP -1  DO
+            IF (arr[j]>R) THEN
+                arr[j+1]:=arr[j];
+                arr[j]:=R;
+            END_IF
+
+        END_FOR
+    END_FOR
+END 
